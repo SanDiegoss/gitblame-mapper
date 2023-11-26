@@ -31,5 +31,5 @@
     ```
 * Develop (no-compiling JS code, devDependecies required)
   ```bash
-    ts-node "src\index.ts"
+    ts-node "src/index.ts"
   ```
