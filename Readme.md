@@ -2,6 +2,12 @@
 
 ## How to use
 
+### .env configuration
+
+```bash
+  TOKEN="your_token"
+  ```
+
 ### Install dependencies
 
 ```bash
