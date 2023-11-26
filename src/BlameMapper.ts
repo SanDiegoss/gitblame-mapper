@@ -7,13 +7,6 @@ interface BlameOptions {
     owner?: string;
 }
 
-export interface Commit {
-  author: {
-    name: string;
-  };
-  authoredDate: string;
-}
-
 interface Range {
   commit: Commit;
   startingLine: number;
@@ -36,6 +29,13 @@ interface BlameMapperOptions {
   isRepoInPath?: boolean;
 }
 
+export interface Commit {
+    author: {
+      name: string;
+    };
+    authoredDate: string;
+  }
+
 export class BlameMapper {
   readonly blameMap: Map<string, Range[]> = new Map<string, Range[]>();
   readonly options: BlameMapperOptions = {};
@@ -51,9 +51,6 @@ export class BlameMapper {
     this.blameMap.set(file, ranges);
   }
   find(file: string, line: number): Commit {
-    if (line === 8919) {
-        debugger
-    }
     if (!this.blameMap.has(file)) {
       console.error(`Cannot find file ${file} in blameMap`);
       return {
