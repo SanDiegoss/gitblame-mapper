@@ -3,7 +3,8 @@
       "module": "NodeNext",
       "target": "ESNext",
       "outDir": "dist",
-      "esModuleInterop": true
+      "esModuleInterop": true,
+      "sourceMap": true
     },
     "include": ["src/**/*"],
     "exclude": ["node_modules"],
