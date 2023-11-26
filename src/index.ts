@@ -25,13 +25,3 @@ Promise.all(fileArray.map((file) => blameMapper.blameAndSet({pathToFile: file, b
     isSingleFile: false,
   });
 });
-
-// Promise.all([
-//   blameMapper.blameAndSet('build/Gruntfile.js'),
-//   blameMapper.blameAndSet('MakeFile'),
-// ]).then(() => {
-//   console.log(blameMapper.find('build/Gruntfile.js', 342));
-//   console.log(blameMapper.find('build/Gruntfile.js', 15));
-//   console.log(blameMapper.find('build/Gruntfile.js', 47));
-//   console.log(blameMapper.find('build/Gruntfile.js', 96));
-// });
